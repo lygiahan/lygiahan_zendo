@@ -48,7 +48,9 @@
 			</h2>
 			<hr>
 			<div class="preview-product">
-				đs
+				<p class="preview-product-text">
+					
+				</p>
 				
 			</div>
 		</div>
@@ -63,5 +65,20 @@
 		{%endif%}
 
 		var selectedViewData = "{% if template contains '.list' %}data_list{% else %}data{% endif %}";
+	</script>
+	<script>
+		let local = localStorage.getItem("recentProduct");
+		 function getProduct(name){
+			 
+			fetch(`/${name}.js`)
+			 .then(data => data.json())
+			 .then(res=>console.log(res))
+		 }
+		
+		getProduct(local)	
+	    if( local){
+		    document.querySelector('.preview-product-text').innerHTML=local;
+		}
+
 	</script>
 </div>

@@ -16,10 +16,18 @@
 {%endif%}
 {% endfor%}
 
-{{product.alias}}
+{%assign local = {{product.alias}}%}
+{{local}}
 
-localStorage.setItem("recentProduct", {{product.alias}});
-
+<script>
+   let mang =[];
+	
+	
+	mang.push('{{local}}')
+	console.log(mang);
+   localStorage.setItem("recentProduct",mang);
+    
+</script>
 {% include 'breadcrumb' %} 
 <section class="product details-main" itemscope itemtype="https://schema.org/Product">	
 	<meta itemprop="url" content="{{ store.url }}{{ product.url }}">
