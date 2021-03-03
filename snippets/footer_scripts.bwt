@@ -1,0 +1,42 @@
+<!-- Add to cart -->
+{% include 'script_js' %}
+{% if template contains 'product' %}{%if settings.product_tab3_enable %}{% include 'bpr-products-module' %}{% endif %}{% endif %}
+{%if settings.quickview_enable %}
+{% include 'quickview-template' %}
+<script type="text/javascript" defer src="{{ 'quickview.js' | asset_url }}"></script>
+{% endif %}
+{%comment%}
+{% include 'mainjs-inline' %}
+{%endcomment%}
+<link rel="preload" as="script" href="{{ 'main.js' | asset_url }}" />
+{{ 'main.js' | asset_url | script_tag }}
+
+{% if template contains 'collection' or template contains 'search' %}
+{{ 'search_filter.js'  | asset_url | script_tag }}
+<script>
+	var filter = new Bizweb.SearchFilter()
+	{% if collection.id > 0 %}
+	filter.addValue("collection", "collections", "{{ collection.id }}", "AND");
+					{% endif %}
+					function clearAllFiltered() {
+		filter = new Bizweb.SearchFilter();
+		{% if collection.id > 0 %}
+		filter.addValue("collection", "collections", "{{ collection.id }}", "AND");
+						{% endif %}
+
+						$(".filter-container__selected-filter-list ul").html("");
+		$(".filter-container input[type=checkbox]").attr('checked', false);
+		$(".filter-container__selected-filter").hide();
+
+		doSearch(1);
+	}
+</script>
+{{ 'col.js'  | asset_url | script_tag }}
+{%endif%}
+{% if template contains 'product' %}
+{{ 'lightbox.css' | asset_url | stylesheet_tag }}
+{%if settings.product_lightbox_enable%}		
+{{ 'jquery.prettyPhoto.min005e.js' | asset_url | script_tag }}
+{{ 'jquery.prettyPhoto.init.min367a.js' | asset_url | script_tag }}
+{%endif%}
+{%endif%}

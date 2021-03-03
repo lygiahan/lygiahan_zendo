@@ -1,0 +1,175 @@
+/*============================================================================
+#Variable
+==============================================================================*/
+$gutter: 30px;
+$main-color: {{ settings.main-color }};
+$font-base:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$hover: {{ settings.main-color }};
+$text-color: {{ settings.color_body_text }};
+
+/*Contact Page*/
+
+.page_cotact {
+	font-family: $font-base;
+	.title-head-contact {
+		color: $text-color;
+		font-size: 30px !important;
+		font-family: $font-base;
+		font-weight: 700; 
+		text-transform: none;
+		position: relative;
+		display: block;
+		margin: 0;
+		padding-bottom: 10px;
+		span {
+			display: block;
+			padding: 10px 0;
+		}
+
+	}
+	p {
+		color: #8d90a6;
+	}
+	.title_db {
+		font-size: 18px !important;
+		font-weight: 700;
+		color: $text-color;
+		text-transform: uppercase;
+		position: relative;
+		display: block;
+		margin: 0;
+		padding-bottom: 0px;
+		span {
+			display: block;
+			padding: 10px 0;
+		}
+	}
+	
+	.form-signup {margin:0px;}
+}
+.page-login {
+	.title-head-contact {
+		&:before {
+			width: 25%;
+		}
+	}
+}
+
+.group_contact {
+	.form-group{
+		padding:0px 15px;
+		margin-bottom:15px;
+		color:$text-color;
+		.form-control {
+			border-radius: 0px !important;
+			font-size:14px;
+			color:$text-color;
+			height:40px;
+			padding: 0px 15px;
+			&::-webkit-input-placeholder {color: #acacac};
+			&::-moz-placeholder {color: #acacac};
+			&:-ms-input-placeholder {color: #acacac};
+
+		}
+		.content-area {
+			min-height:100px;
+			padding: 10px 15px;
+			border-radius: 0 !important;
+			resize: none;
+		}
+		input, textarea {
+			border-color:#f7f7f7;
+			background-color: #f7f7f7;
+			&:focus {
+				border-color:#f7f7f7;
+			}
+		}
+
+		.btn-50-full {
+			font-family: $font-base;
+			position: absolute;
+			right: 15px;
+			bottom: 0px;
+			box-shadow: none;
+			padding: 8px 20px;
+			font-size: 14px;
+			color: #fff;
+			background: $main-color;
+			border: solid 1px $main-color;
+			&:hover {
+				border-color:$hover;
+				background:#fff;
+				color:$hover;
+
+			}
+		}
+	}
+	.btn-lienhe {
+		border-radius:0;
+		font-family: 'Open Sans', sans-serif;
+		border: 1px #ddd solid;
+		background: #fff;
+		color:$text-color;
+		padding:0px 12px;
+		transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
+		font-weight: 400;
+		text-transform: uppercase;
+		display:inline-block;
+		min-width:80px;
+		position: relative;
+		.fa {
+			margin-right:5px;
+		}
+		&:hover {
+			background:$hover;
+			color:#fff;
+		}
+	}
+}
+
+
+.thank_text {
+	color: $main-color;
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.google-map {width:100%;}
+.google-map .map {width:100%; height:450px; background:#dedede}
+@media (max-width: 543px) {
+	.page-login span.intr {
+		font-size:13px!important;
+	}
+	.address .page_address .adr_title .title-head a {
+		width:100%;
+		margin:15px 0;
+	}
+}
+.iFrameMap {
+	iframe {
+		width:100%!important;
+		height:450px;
+	}
+}
+.title-head-contact {
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0px;
+}
+.page_contact {
+	padding-bottom:40px;
+	label {
+		display: inline-block;
+		max-width: 100%;
+		margin-bottom: 5px;
+		font-weight: 700;
+		em {
+			color:red;
+		}
+	}
+}
