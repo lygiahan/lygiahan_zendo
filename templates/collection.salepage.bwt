@@ -2,15 +2,21 @@
 
 {% assign loadProduct = 20%}
 <section class="hero">
+<<<<<<< HEAD
 	  {%if settings.sale_use_image%}
 	  <img src={{'happy-sale-kv-final-ngang-1920x450_f88a33d7300f4552ae68e4bac9c89298.png' | asset_url }} alt="img" />
 	  {%endif%}
 </section>
 
+=======
+	  <img src={{'happy-sale-kv-final-ngang-1920x450_f88a33d7300f4552ae68e4bac9c89298.png'| asset_url }} />
+</section>
+>>>>>>> feature/CreateCollectionPage
 <div class="section wrap_background">
 	<div class="container ">
 		<div class="bg_collection section">
 			<div class="row">
+<<<<<<< HEAD
 				<div class="main_container collection col-lg-12 col-md-12 col-sm-12">
 		            <div class="tabAppCombo mt-2" id="tabAppCombo">
 						 <div class="row ">
@@ -41,6 +47,35 @@
   <div class="tab-pane fade" id="45a03cd4-896f-438c-a71d-6a5702774079" role="tabpanel" aria-labelledby="pills-profile-tab">...so2</div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
 </div>
+=======
+			
+				<div class="main_container collection col-lg-12 col-md-12 col-sm-12">
+		            <div class="tabAppCombo mt-2">
+						 <div class="row">
+							<div class="col-md-3">								 
+								<div class="tabLarge">
+									 <a class="tabLarge-link" href="#">set 690k</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								 <div class="tabLarge">
+									 <a class="tabLarge-link" href="#">set 750k</a>
+								 </div>								 
+							</div>
+							<div class="col-md-3">
+								<div class="tabLarge">
+									 <a class="tabLarge-link" href="#">set 800k</a>
+								</div>							 
+							</div>
+							 <div class="col-md-3">
+								 <div class="tabLarge">
+									 <a class="tabLarge-link" href="#">set 1000k</a>
+								</div>
+							 </div>
+						</div>
+						
+					</div>
+>>>>>>> feature/CreateCollectionPage
 						<!-- Lọc Loại -->
 					{% if settings.filter_type %}
 					{%assign typers = collection.all_types.size%}
@@ -54,9 +89,15 @@
 								{%-if type != ''-%}
 								<div class="filter-item filter-item--check-box filter-item--green">
 
+<<<<<<< HEAD
 									<span class="btn-filter" id={{collection.id}}>
 										{{type}}										
 									</span>
+=======
+									<a class="btn-filter"id="filter-{{ type | handleize }}" onclick={console.log('{{type}}')}data-group="PRODUCT_TYPE" data-field="product_type.filter_key">
+										{{type}}
+									</a>
+>>>>>>> feature/CreateCollectionPage
 								</div>
 								{%-endif-%}
 								{% endfor %}
@@ -64,12 +105,16 @@
 						</div>
 			
 		</aside>
+<<<<<<< HEAD
 			<div style="text-align:center">
 				<p style="font-size:18px">
 	<span style="font-weight:bold">Công thức tính SET 690k:</span> 1 Giày + Ví/Mắt kính/Sneakers 3cm
 Hoặc được mua cùng 2 sản phẩm trong các nhóm Giày, Ví, Mắt kính, Sneakers 3cm
 				</p>
 			</div>
+=======
+						
+>>>>>>> feature/CreateCollectionPage
 						</div>
 		{%-endif-%}
 		{%-endif-%}
@@ -129,6 +174,7 @@ Hoặc được mua cùng 2 sản phẩm trong các nhóm Giày, Ví, Mắt kín
 	//	function loadMoreItem() {
 	//	       load 
 		//	}
+<<<<<<< HEAD
 			 window.onload = function(){
 				let getFil=   document.querySelectorAll('.btn-filter');
 				   
@@ -143,6 +189,8 @@ Hoặc được mua cùng 2 sản phẩm trong các nhóm Giày, Ví, Mắt kín
 		     
 			 }
 		 
+=======
+>>>>>>> feature/CreateCollectionPage
 		
 		var colName = "{%if page_title == 'All'%}Tất cả sản phẩm{%else%}{{ page_title }}{%endif%}";
 		{% if collection.id > 0 %}
@@ -154,4 +202,8 @@ Hoặc được mua cùng 2 sản phẩm trong các nhóm Giày, Ví, Mắt kín
 		var selectedViewData = "{% if template contains '.list' %}data_list{% else %}data{% endif %}";
 	</script>
 	
+<<<<<<< HEAD
+=======
+	 
+>>>>>>> feature/CreateCollectionPage
 </div>

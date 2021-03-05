@@ -105,6 +105,7 @@
 	
 
 	<div class="product-info">
+<<<<<<< HEAD
 	         <ul class="product-info-list"style="margin:0px;margin-bottom:20px;padding:0">		
             {% for image in product.images %}
 				 <li style="height:auto;width:30px;border:1px solid #9da08c;margin:0 3px; cursor:pointer">
@@ -113,6 +114,28 @@
 				 </li>
 			{% endfor %}
 			</ul>
+=======
+	         <ul class="product-info-list"style="margin:0px">		
+            {%for pro in product.variants%}
+		       {% assign vendor = pro.option1 %}
+				{% case vendor %}
+				  {% when 'Trắng' %}
+		            <li class="product-info-icon icon-info" style="background-color:#F8F8FF">
+				    </li>
+				  {% when 'Đen' %}
+		            <li class="product-info-icon icon-info" style="width:20px;height:20px;border-radius:50%;background-color:black"></li>
+				  {% when 'Xám' %}
+		            <li class="product-info-icon icon-info" style="width:20px;height:20px;border-radius:50%;background-color:black"></li>
+				  {% when 'Đỏ' %}	
+		            <li class="product-info-icon icon-info" style="width:20px;height:20px;border-radius:50%;background-color:red"></li>
+					{% when 'Xanh' %}
+		            <li class="product-info-icon icon-info" style="width:20px;height:20px;border-radius:50%;background-color:#B0E0E6"></li>
+			     {% else %}
+
+				{% endcase %}
+				{%endfor%}
+				 </ul>
+>>>>>>> feature/CreateCollectionPage
 	
 		
 		
