@@ -1,0 +1,11 @@
+{%layout none%}
+{%capture json%}
+{%for result in search.results%}
+{
+   "name":"{{result.name}}"
+}
+{%endfor%}
+{%endcapture%}
+[
+ {{json | remove_first : ","}}
+]
